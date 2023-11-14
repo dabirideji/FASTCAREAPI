@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\FastCare.Application\\FastCare.Application.csproj": {}
+    "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\fastcare.application\\FastCare.Application.csproj": {}
   },
   "projects": {
-    "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\FastCare.Application\\FastCare.Application.csproj": {
+    "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\fastcare.application\\FastCare.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\FastCare.Application\\FastCare.Application.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\fastcare.application\\FastCare.Application.csproj",
         "projectName": "FastCare.Application",
-        "projectPath": "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\FastCare.Application\\FastCare.Application.csproj",
+        "projectPath": "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\fastcare.application\\FastCare.Application.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\FastCare.Application\\obj\\",
+        "outputPath": "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\fastcare.application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Automapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Automapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
