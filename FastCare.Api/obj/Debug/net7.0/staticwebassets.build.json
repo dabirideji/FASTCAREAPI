@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AT2hskS5W84AooDUb2VD85yzHPZN0oWUeEjG1KMbpmA=",
+  "Source": "FastCare.Api",
+  "BasePath": "_content/FastCare.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

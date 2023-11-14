@@ -1,0 +1,11 @@
+c:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\bin\Debug\net7.0\FastCare.Domain.deps.json
+C:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\bin\Debug\net7.0\FastCare.Domain.dll
+C:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\bin\Debug\net7.0\FastCare.Domain.pdb
+C:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\obj\Debug\net7.0\FastCare.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\obj\Debug\net7.0\FastCare.Domain.AssemblyInfoInputs.cache
+C:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\obj\Debug\net7.0\FastCare.Domain.AssemblyInfo.cs
+C:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\obj\Debug\net7.0\FastCare.Domain.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\obj\Debug\net7.0\FastCare.Domain.dll
+C:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\obj\Debug\net7.0\refint\FastCare.Domain.dll
+C:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\obj\Debug\net7.0\FastCare.Domain.pdb
+c:\xampp\htdocs\COURSES\.NET\FASTCAREAPI\FastCare.Domain\obj\Debug\net7.0\ref\FastCare.Domain.dll
