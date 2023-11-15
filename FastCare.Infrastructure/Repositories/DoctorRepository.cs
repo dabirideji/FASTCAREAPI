@@ -60,7 +60,11 @@ namespace FastCare.Infrastructure.Repositories
             if(doctor==null){
                 return null;
             }
-            doctor=_mapper.Map<Doctor>(dto);
+            doctor.DoctorBio=dto.DoctorBio;
+            doctor.DoctorDegree=dto.DoctorDegree;
+            doctor.DoctorExperience=dto.DoctorExperience;
+            doctor.DoctorRatings=dto.DoctorRatings;
+            doctor.DoctorLocation=dto.DoctorLocation;
             await _context.SaveChangesAsync();
             return  doctor;
         }
