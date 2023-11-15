@@ -51,6 +51,13 @@ builder.Services.AddScoped<IDoctorRepository,DoctorRepository>();
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+//ADDING AUTOMAPPER FOR EASY CONVERSION FROM ONE CLASS TO ANOTHER
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();

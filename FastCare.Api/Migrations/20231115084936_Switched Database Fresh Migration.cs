@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace FastCare.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class AddedDoctorsTable : Migration
+    public partial class SwitchedDatabaseFreshMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

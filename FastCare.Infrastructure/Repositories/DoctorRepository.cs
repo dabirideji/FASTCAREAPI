@@ -7,34 +7,62 @@ using FastCare.Domain.Models;
 using FastCare.Application.Dtos.Doctor.Request;
 using FastCare.Application.Dtos.Doctor.Response;
 using FastCare.Application.Dependencies.Interfaces.IRepositories;
+using FastCare.Infrastructure.Data;
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace FastCare.Infrastructure.Repositories
 {
     public class DoctorRepository : IDoctorRepository
     {
-        public Task<Doctor> CreateDoctor(CreateDoctorDto dto)
+        private readonly FastCareDbContext _context;
+        private readonly IMapper _mapper;
+
+        public DoctorRepository(FastCareDbContext context, IMapper mapper)
         {
-            throw new NotImplementedException();
+            _mapper = mapper;
+            _context = context;
         }
 
-        public Task<bool> DeleteDoctor(Guid DoctorId)
+        public async Task<Doctor> CreateDoctor(CreateDoctorDto dto)
         {
-            throw new NotImplementedException();
+            var doctor = _mapper.Map<Doctor>(dto);
+            await _context.Doctors.AddAsync(doctor);
+            await _context.SaveChangesAsync();
+            return doctor;
         }
 
-        public Task<IEnumerable<Doctor>> GetAllDoctors()
+        public async Task<Doctor> GetDoctorById(Guid DoctorId)
         {
-            throw new NotImplementedException();
+            var doctor=await _context.Doctors.FindAsync(DoctorId);
+            return doctor;
         }
 
-        public Task<Doctor> GetDoctorById(Guid DoctorId)
+        public async Task<bool> DeleteDoctor(Guid DoctorId)
         {
-            throw new NotImplementedException();
+            var doctor= await GetDoctorById(DoctorId);
+            if(doctor==null){
+                return false;
+            }
+            _context.Doctors.Remove(doctor);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public Task<Doctor> UpdateDoctor(Guid DoctorId, UpdateDoctorDto dto)
+        public async Task<IEnumerable<Doctor>> GetAllDoctors()
         {
-            throw new NotImplementedException();
+            return await _context.Doctors.ToListAsync();
+        }
+
+        public async Task<Doctor> UpdateDoctor(Guid DoctorId, UpdateDoctorDto dto)
+        {
+            var doctor=  await GetDoctorById(DoctorId);
+            if(doctor==null){
+                return null;
+            }
+            doctor=_mapper.Map<Doctor>(dto);
+            await _context.SaveChangesAsync();
+            return  doctor;
         }
     }
 }

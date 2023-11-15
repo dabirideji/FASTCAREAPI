@@ -11,10 +11,10 @@ namespace FastCare.Application.Dependencies.Interfaces.IServices
 {
     public interface IDoctorService
     {
-        Task<Doctor> CreateDoctor(CreateDoctorDto dto);
-        Task<IEnumerable<Doctor>> GetAllDoctors();
-        Task<Doctor> GetDoctorById(Guid DoctorId);
-        Task<Doctor> UpdateDoctor(Guid DoctorId,UpdateDoctorDto dto);
+        Task<ReadDoctorDto> CreateDoctor(CreateDoctorDto dto);
+        Task<IEnumerable<ReadDoctorDto>> GetAllDoctors();
+        Task<ReadDoctorDto> GetDoctorById(Guid DoctorId);
+        Task<ReadDoctorDto> UpdateDoctor(Guid DoctorId,UpdateDoctorDto dto);
         Task<bool> DeleteDoctor(Guid DoctorId);
     }
 }

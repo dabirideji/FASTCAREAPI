@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FastCare.Api.Migrations
 {
     [DbContext(typeof(FastCareDbContext))]
-    [Migration("20231115072730_Added Doctors Table")]
-    partial class AddedDoctorsTable
+    [Migration("20231115084936_Switched Database Fresh Migration")]
+    partial class SwitchedDatabaseFreshMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -8,9 +8,10 @@ namespace FastCare.Domain.Models
 {
     public class Doctor
     {
+        [Key]
         public Guid DoctorId { get; set; }
+        //USER ID COMING SOON
 
-        [Range(0, 5, ErrorMessage = "Ratings must be between 0 and 5.")]
         public int DoctorRatings { get; set; }
         public int DoctorExperience { get; set; }
         
