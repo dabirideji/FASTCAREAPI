@@ -13,7 +13,7 @@ namespace FastCare.Domain.Models
         public Guid DoctorId { get; set; }
 
         //USER ID COMING SOON
-        public MedicalPracticionerType MyProperty { get; init; }=MedicalPracticionerType.MedicalDoctor;
+        protected MedicalPracticionerType MedicalAccountType { get; init; }=MedicalPracticionerType.MedicalDoctor;
 
     }
 }

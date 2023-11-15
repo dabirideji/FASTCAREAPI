@@ -40,14 +40,11 @@ namespace FastCare.Api.Migrations
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MedicalAccountType")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MyProperty")
-                        .HasColumnType("int");
-
                     b.Property<int>("Ratings")
                         .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("DoctorId");
 
@@ -90,6 +87,41 @@ namespace FastCare.Api.Migrations
                     b.HasKey("DrugId");
 
                     b.ToTable("Drugs");
+                });
+
+            modelBuilder.Entity("FastCare.Domain.Models.Facility", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Availability")
+                        .HasColumnType("int");
+
+                    b.Property<double>("BookingPrice")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FacilityType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Ratings")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Facilities");
                 });
 #pragma warning restore 612, 618
         }

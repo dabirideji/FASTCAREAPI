@@ -48,12 +48,16 @@ builder.Services.AddScoped<IDoctorRepository,DoctorRepository>();
 
 
 
-
-
-
 //DRUG SERVICE AND REPOSITORY
 builder.Services.AddScoped<IDrugService,DrugService>();
 builder.Services.AddScoped<IDrugRepository,DrugRepository>();
+
+
+
+
+//FACILITY SERVICE AND REPOSITORY
+builder.Services.AddScoped<IFacilityRepository,FacilityRepository>();
+builder.Services.AddScoped<IFacilityService,FacilityService>();
 
 
 

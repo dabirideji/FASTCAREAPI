@@ -12,6 +12,7 @@ namespace FastCare.Domain.Models
         public int Ratings { get; set; }
         public int Experience { get; set; }
         //USER ID COMING SOON
+        public Guid UserId { get; set; }
         public MedicalPracticionerType MedicalAccountType { get; init; }
         public String? Degree { get; set; }
         public String? Bio { get; set; }

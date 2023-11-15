@@ -13,6 +13,8 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace FastCare.Api.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class DrugController : ControllerBase
     {
         private readonly IDrugService _service;
