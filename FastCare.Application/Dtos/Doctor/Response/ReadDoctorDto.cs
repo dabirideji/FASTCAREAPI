@@ -10,11 +10,11 @@ namespace FastCare.Application.Dtos.Doctor.Response
         public Guid DoctorId { get; set; }
         //USER ID COMING SOON
         //USER ALSO COMING SOON
-        public int DoctorRatings { get; set; }
-        public int DoctorExperience { get; set; }
+        public int Ratings { get; set; }
+        public int Experience { get; set; }
 
-        public String? DoctorDegree { get; set; }
-        public String? DoctorBio { get; set; }
-        public String? DoctorLocation { get; set; }
+        public String? Degree { get; set; }
+        public String? Bio { get; set; }
+        public String? Location { get; set; }
     }
 }

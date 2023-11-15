@@ -26,7 +26,7 @@ namespace FastCare.Api.Controllers
 
         [HttpPost("CreateDoctor")]
         public async Task<ActionResult<DefaultResponse<ReadDoctorDto>>> CreateDoctor(
-            CreateDoctorDto dto
+           [FromBody] CreateDoctorDto dto
         )
         {
             if (!ModelState.IsValid)
@@ -115,7 +115,7 @@ namespace FastCare.Api.Controllers
 
 
 [HttpPut("UpdateDoctor/{DoctorId}")]
-public async Task<ActionResult<DefaultResponse<ReadDoctorDto>>> UpdateDoctor([FromRoute]Guid DoctorId,UpdateDoctorDto dto){
+public async Task<ActionResult<DefaultResponse<ReadDoctorDto>>> UpdateDoctor([FromRoute]Guid DoctorId,[FromBody]UpdateDoctorDto dto){
      try
             {
                 var doctor = await _service.UpdateDoctor(DoctorId,dto);

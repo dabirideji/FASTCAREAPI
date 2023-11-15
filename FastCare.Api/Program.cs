@@ -13,13 +13,13 @@ var builder = WebApplication.CreateBuilder(args);
 //#DATABASE CONFIGURATIONS
 
 
-//USE THIS FOR YOUR SQLSERVER DATABASE ON YOUR SYSTEM
+//USE THIS FOR YOUR SQLSERVER DATABASE ON YOUR SYSTEM IF U WANT TO BE  SEEING THE DATA AS YOU TEST,
 // builder.Services.AddDbContext<FastCareDbContext>(options=>{
 //     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("FastCare.Api"));
 // });
 
 
-//USE THIS FOR THE OFFLINE SQLITE FILE, LIKE IF YOU DONT WANT THE STRESS OF STARTING SERVER AND ALL ;-)
+//USE THIS FOR THE OFFLINE SQLITE FILE, LIKE IF YOU DONT WANT THE STRESS OF STARTING SERVER AND ALL , OR EVEN SEEING THE DATA ;-)
 // builder.Services.AddDbContext<FastCareDbContext>(options=>{
 //     options.UseSqlite(builder.Configuration.GetConnectionString("Offline"),b => b.MigrationsAssembly("FastCare.Api"));
 // });
@@ -44,6 +44,16 @@ builder.Services.AddDbContext<FastCareDbContext>(options=>{
 //DOCTOR SERVICE AND REPOSITORY
 builder.Services.AddScoped<IDoctorService,DoctorService>();
 builder.Services.AddScoped<IDoctorRepository,DoctorRepository>();
+
+
+
+
+
+
+
+//DRUG SERVICE AND REPOSITORY
+builder.Services.AddScoped<IDrugService,DrugService>();
+builder.Services.AddScoped<IDrugRepository,DrugRepository>();
 
 
 

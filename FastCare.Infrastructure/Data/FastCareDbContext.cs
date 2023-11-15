@@ -14,5 +14,6 @@ namespace FastCare.Infrastructure.Data
         }
 
         public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Drug> Drugs { get; set; }
     }
 }
