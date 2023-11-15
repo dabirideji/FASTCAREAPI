@@ -20,15 +20,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 //USE THIS FOR THE OFFLINE SQLITE FILE, LIKE IF YOU DONT WANT THE STRESS OF STARTING SERVER AND ALL ;-)
-builder.Services.AddDbContext<FastCareDbContext>(options=>{
-    options.UseSqlite(builder.Configuration.GetConnectionString("Offline"),b => b.MigrationsAssembly("FastCare.Api"));
-});
+// builder.Services.AddDbContext<FastCareDbContext>(options=>{
+//     options.UseSqlite(builder.Configuration.GetConnectionString("Offline"),b => b.MigrationsAssembly("FastCare.Api"));
+// });
 
 
 //USE THIS FOR THE LIVE SQL DATABASE , NOTE YOU MUST BE CONNECTED TO THE INTERNET.
-// builder.Services.AddDbContext<FastCareDbContext>(options=>{
-//     options.UseSqlServer(builder.Configuration.GetConnectionString("Online"), b => b.MigrationsAssembly("FastCare.Api"));
-// });
+builder.Services.AddDbContext<FastCareDbContext>(options=>{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Online"), b => b.MigrationsAssembly("FastCare.Api"));
+});
 
 
 

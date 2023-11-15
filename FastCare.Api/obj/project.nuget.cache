@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1oqgIaXwfOeKjEK9oXnjIU68Jc9S+LVyJ115ZFI+AearAajtyXORI5Gi1OuOMTniq9Hkr3Sigj0ktYeIDG7HRQ==",
+  "dgSpecHash": "hk0EeZBnNf4+jEcd9crxe6M0Aw+TjV2vleQoQQ0vtP7/Z1WItL1uvqjVjuf0ln78WBIrtfsjZfRJCMlpOawcYA==",
   "success": true,
-  "projectFilePath": "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\FastCare.Api\\FastCare.Api.csproj",
+  "projectFilePath": "C:\\xampp\\htdocs\\COURSES\\.NET\\FASTCAREAPI\\Fastcare.api\\FastCare.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
