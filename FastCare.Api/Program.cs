@@ -1,14 +1,17 @@
+using FastCare.Application.Dependencies.Interfaces.IRepositories;
+using FastCare.Application.Dependencies.Interfaces.IServices;
+using FastCare.Application.Dependencies.Services;
 using FastCare.Infrastructure.Data;
+using FastCare.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//#DATABASE CONFIGURATIONS
+
 
 //USE THIS FOR YOUR SQLSERVER DATABASE ON YOUR SYSTEM
 // builder.Services.AddDbContext<FastCareDbContext>(options=>{
@@ -22,12 +25,38 @@ builder.Services.AddDbContext<FastCareDbContext>(options=>{
 });
 
 
-
-//USE THIS FOR THE LIVE SQL DATABASE , NOTE YOU MUST BE CONNECTED TO THE INTERNET,  ,FOR REAL TIME EXPERIENCE
+//USE THIS FOR THE LIVE SQL DATABASE , NOTE YOU MUST BE CONNECTED TO THE INTERNET.
 // builder.Services.AddDbContext<FastCareDbContext>(options=>{
 //     options.UseSqlServer(builder.Configuration.GetConnectionString("Online"), b => b.MigrationsAssembly("FastCare.Api"));
 // });
 
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//DEPENDENCY INJECTIONS AND SERVICE LIFETIMES
+
+//DOCTOR SERVICE AND REPOSITORY
+builder.Services.AddScoped<IDoctorService,DoctorService>();
+builder.Services.AddScoped<IDoctorRepository,DoctorRepository>();
+
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();

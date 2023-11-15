@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FastCare.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace FastCare.Infrastructure.Data
@@ -12,6 +13,6 @@ namespace FastCare.Infrastructure.Data
         {
         }
 
-        
+        public DbSet<Doctor> Doctors { get; set; }
     }
 }
